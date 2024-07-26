@@ -1,0 +1,20 @@
+<script>
+  var headers = new Headers();
+  headers.append("Content-Type", "application/json");
+  var body = {
+    "firstname": {{dlv - Firstname}},
+    "lastname": {{dlv - Lastname}},
+    "email": {{dlv - Email}},
+    "phone": {{dlv - Phone}}
+  };
+  var options = {
+    method: "POST",
+    headers: headers,
+    mode: "cors",
+    body: JSON.stringify(body)
+  };
+
+fetch("webhookURL", options);
+  
+
+</script>
